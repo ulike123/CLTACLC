@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Copy Long Text Area Code Legacy Control</title>
+</head>
+
+<body>
+
+<!-- CLTACLC(Copy Long Text Area Code Legacy Control) -->
+<style type="text/css">
+
+.cltaclc-wrap {
+  min-width: 123px;
+  max-width: 99%;
+  display: inherit;
+  padding: 1px;
+  margin:  1px;
+  border:  solid 1px #555;
+}
+
+.cltaclc-title{ float: left; color: #555; font-size: 26px; font-family: Arial, Helvetica, sans-serif; font-weight: 100; }
+
+.cltaclc-icon {
+  float:   right;
+  width:   10px;
+  height:  12px;
+  display: inline-block;
+  padding: 4px;
+  margin:  4px;
+  border:  solid 1px #eee;
+  cursor:  pointer;
+  background: #888;
+}
+.cltaclc-icon:hover { background: blue; }
+.cltaclc-icon:after {
+  width:  11px;
+  height: 13px;
+  padding:2px;
+  margin: 2px;
+  border: solid 1px #000;
+  border-left: 0;
+  border-top:  0;
+  background: transparent;
+}
+.cltaclc-icon:before,
+.cltaclc-icon:after {
+  cursor: pointer;
+  content: '';
+  display: block;
+}
+
+#cltaclc-text {
+  width:  99%;
+  min-height: 100px;
+  max-height: 260px;
+  display: inline-block;
+  padding: 1px;
+  margin:  1px;
+  border-right:  0;
+  border-left:   solid 1px #eee;
+  border-bottom: solid 2px #eee;
+  border-top:    solid 3px #888;
+  font-size: 1em;
+  font-family:"Courier New", Courier, monospace;
+  color: #fff;
+  text-transform: none; /* to avoid other styles altering case-sensitive codes */
+  text-decoration: none;
+  overflow: auto;
+  background: blue;
+}
+#cltaclc-text:hover { background: #000; }
+#cltaclc-text::-webkit-scrollbar { width: 6px; }
+#cltaclc-text::-webkit-scrollbar-track { background: #eee; }
+#cltaclc-text::-webkit-scrollbar-thumb { background: #888; }
+#cltaclc-text::-webkit-scrollbar-thumb:hover { background: #555; }
+#cltaclc-text a { color: #fff; }
+#cltaclc-text a:hover { color: #eee; }
+
+</style>
+
+<div class="cltaclc-wrap">
+  <div style="clear:both;"><span class="cltaclc-title">&nbsp;&lt;Code&gt;&nbsp;</span><span id="cltaclc" class="cltaclc-icon" title="Copy code"></span></div>
+  <div id="cltaclc-text">
+  code<br />
+	Rich HTML code code code code code code code code code code code code code code code code code code <br />
+	cooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooode<br />
+	code<br />
+	The previous is a sample for both words break and none words break.<br />
+	code<br />
+	Minimize this window to test that and also to see scrolls in action.<br />
+	code<br />
+	Friendly for mobiles, rotate your device.<br />
+	code<br />
+	code<br />
+	code<br />
+	code<br />
+	code<br />
+	code<br />
+	code<br />
+	Read more about writeText function here:<br />
+	<a rel="noopener noreferrer nofollow" title="writeText function" href="//developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText">https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText</a><br />
+	code<br />
+	It won't copy URLs if they are not in a legacy format like the previous(full URI).<br />
+	code<br />
+	And normally, it won't copy styles ever.<br />
+	code<br />
+	It just copies plain text.<br />
+	code<br />
+	No BOF(beginning of) or EOF(end of) file is here or binary start or end...<br />
+	code<br />
+	code<br />
+	It is just an HTML tag that contains the code you see to be copied as plain text.<br />
+	code<br />
+	code<br />
+	<pre>
+	<code>
+	pre preserving text as it is with line-breaks, white spaces, etc.
+	pre
+	pre
+	Either HTML tags format is OK since only inner text is copied!
+	pre
+	Both will be copied just like they appear on this terminal style simulator.
+	</code>
+	</pre>
+  </div>
+</div>
+
+<script type="text/javascript">
+document.getElementById('cltaclc').addEventListener('click', function() {
+  var text = document.getElementById('cltaclc-text');
+  navigator.clipboard.writeText(text.innerText);
+})
+</script>
+<!-- CLTACLC(Copy Long Text Area Code Legacy Control) -->
+
+</body>
+
+</html>
